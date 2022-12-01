@@ -142,7 +142,7 @@ function Todos() {
                         <p style={{fontWeight:"900", fontSize:"20px", color:"red"}}>Tag : {todos.tag}</p>
                         <div style={{display:"flex",width:"200px",justifyContent:"space-between"}}><Button  variant="contained"  onClick={() => { handleDelete(todos._id) }}>DELETE</Button>
                         <Button variant="contained"  onClick={() => { setUpdate(true) }}>UPDATE</Button></div>
-                        <div>
+                        <div  style={{marginTop:"10px"}}>
                             {
                                 update ?
                                     <div  style={{marginTop:"10px", width:"200px", justifyContent:"space-between"}}>

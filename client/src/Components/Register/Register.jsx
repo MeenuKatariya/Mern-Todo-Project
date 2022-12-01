@@ -9,7 +9,7 @@ function Register() {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [name, setName] = React.useState('');
-    const [alert,setAlert] =React.useState(false);
+    // const [alert,setAlert] =React.useState(false);
     const navigate = useNavigate();
 
     const handleRegister = async (e) => {
@@ -33,12 +33,12 @@ function Register() {
 
             if(res.message){
                 alert(res.message)
-                setAlert(true)
+                // setAlert(true)
 
             }
             else{
                 alert("User created successfully")
-                setAlert(true);
+                // setAlert(true);
                 navigate('/login')
             }
         } catch (error) {
@@ -50,12 +50,7 @@ function Register() {
     return (
        
         <div  >
-            {
-                alert ? <div><Alert severity="success">
-                <AlertTitle>Success</AlertTitle>
-                This is a success alert — <strong>check it out!</strong>
-              </Alert></div> : ""
-            }
+           
         
                  <div style={{ width:"300px",margin:"auto",height:"400px",marginTop:"40px",boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"}} >
                  <h2>Sign up</h2>

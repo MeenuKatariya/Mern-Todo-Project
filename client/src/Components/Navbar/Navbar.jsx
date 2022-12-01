@@ -19,7 +19,7 @@ function Navbar() {
            {/* <div style={{margin:0,marginTop:"0"}}> <h1>Todo</h1></div> */}
             <Link  style={{textDecoration:"none", fontSize:"20px", color:"royalblue",fontWeight:"800"}} to='/'>Homepage</Link>
             {
-                user ? <Link  style={{textDecoration:"none", fontSize:"20px", color:"royalblue",fontWeight:"800"}} to = '/notes'>Todos</Link>:null
+                user ? <Link  style={{textDecoration:"none", fontSize:"20px", color:"royalblue",fontWeight:"800"}} to = '/todo'>Todos</Link>:null
             }
             {
                 user ? <button style={{textDecoration:"none",backgroundColor:"none", fontSize:"20px", color:"royalblue",fontWeight:"800",border:"none"}} onClick={handleLogout}>Logout</button> : <Link style={{textDecoration:"none", fontSize:"20px", color:"royalblue",fontWeight:"800"}} to='/login'>Login</Link>

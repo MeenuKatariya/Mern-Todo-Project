@@ -28,10 +28,14 @@ function Login() {
             let response = await data.json();
             console.log(response)
             let token = response.token;
+           if(token){
             localStorage.setItem('token', token);
             setUser(token)
             alert("User logged in successfully")
             navigate('/notes');
+           }else{
+            alert("Email or password is incorrect")
+           }
         } catch (error) {
             console.log(error)
         }
